@@ -1,0 +1,59 @@
+/* app/assets/stylesheets/places.css.scss */
+@import "bootstrap"; // Assuming you're using Bootstrap for styling
+
+#main-section {
+  background-size: cover;
+  color: #333;
+  text-align: center;
+  padding: 50px 0; /* Adjust the top padding to move the section up */
+  flex: 1;
+  margin-bottom: 50px; /* Adjust the margin to match the height of the footer */
+  /* You may need to adjust this value depending on the height of your footer */
+  overflow-y: auto; /* Add scrollbar if content exceeds viewport height */
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px; /* Adjust the padding values to make the footer narrower */
+  width: 100%;
+  position: relative; /* Change position to relative */
+  bottom: 0;
+}
+
+
+.vertical-menu a {
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  width: 100px; /* Set a fixed width */;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+

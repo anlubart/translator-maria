@@ -1,0 +1,61 @@
+/* app/assets/stylesheets/about.css.scss */
+
+body {
+    background-image: url('download.jpeg');
+    background-size: cover;
+}
+#about-main {
+  color: #333;
+  text-align: center;
+  padding: 1px 0; /* Adjust the top padding to move the section up */
+}
+
+ 
+  
+  #about-supporting {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  #about-supporting h2 {
+    color: #333;
+  }
+  
+  #about-supporting .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  #about-supporting .btn:hover {
+    background-color: #0056b3;
+  }
+  /* CSS for Bio Section */
+.bio-section {
+  background-color: #f9f9f9;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+}
+
+.bio-section h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.bio-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.bio-section .highlight {
+  font-weight: bold;
+  color: #007bff;
+}

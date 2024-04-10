@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Translator Maria</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag 'places.css' %>
+  <%= javascript_importmap_tags %> 
+</head>
+<body>
+  <!-- Navigation menu -->
+  <nav class="vertical-menu">
+    <%= link_to "Home", root_path, class: "nav-link" %>
+    <%= link_to "About", about_path, class: "nav-link" %>
+    <%= link_to "Services", services_path, class: "nav-link" %>
+    <%= link_to "Contact", contact_path, class: "nav-link" %>
+    
+  </nav>
+
+ 
+  <!-- Main content -->
+  <div class="container">
+    <div class="content">
+      <%= yield %>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Made by Ann. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- JavaScript for sliding navigation menu -->
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <!-- JavaScript for sliding navigation menu -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuButton = document.querySelector('.navbar-toggler');
+      const sideNav = document.getElementById('sideNav');
+      
+      // Event listener for the menu button
+      menuButton.addEventListener('click', function() {
+        if (sideNav.style.left === '-250px') { // If the menu is hidden
+          sideNav.style.left = '0'; // Show the menu by moving it to the right
+        } else {
+          sideNav.style.left = '-250px'; // Hide the menu by moving it to the left
+        }
+      });
+    });
+  </script>
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+</body>
+</html>
